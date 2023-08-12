@@ -1,34 +1,16 @@
 # Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# NOTE: The comments in this file are for instruction and documentation.
-# They're not meant to appear with your final, production ebuild.  Please
-# remember to remove them before submitting or committing your ebuild.  That
-# doesn't mean you can't add your own comments though.
-
-# The EAPI variable tells the ebuild format in use.
-# It is suggested that you use the latest EAPI approved by the Council.
-# The PMS contains specifications for all EAPIs. Eclasses will test for this
-# variable if they need to use features that are not universal in all EAPIs.
-# If an eclass doesn't support latest EAPI, use the previous EAPI instead.
 EAPI=8
 
 # inherit lists eclasses to inherit functions from. For example, an ebuild
 # that needs the eautoreconf function from autotools.eclass won't work
 # without the following line:
 #inherit autotools
-#
-# Eclasses tend to list descriptions of how to use their functions properly.
-# Take a look at the eclass/ directory for more examples.
 
-# Short one-line description of this package.
+MY_PN="homestuck"
 DESCRIPTION="Have you heard of homestuck?"
-
-# Homepage, not used by Portage directly but handy for developer reference
 HOMEPAGE="https://bambosh.dev/unofficial-homestuck-collection/#download"
-
-# Point to any required sources; these will be automatically downloaded by
-# Portage.
 SRC_URI="https://github.com/Bambosh/unofficial-homestuck-collection/releases/download/v${PV}/unofficial-homestuck-collection-${PV}.tar.gz"
 
 # Source directory; the dir where the sources can be found (automatically
@@ -38,9 +20,7 @@ SRC_URI="https://github.com/Bambosh/unofficial-homestuck-collection/releases/dow
 #S="${WORKDIR}/${P}"
 
 LICENSE="GPL-3"
-
 SLOT="0"
-
 KEYWORDS="~amd64"
 
 # Comprehensive list of any and all USE flags leveraged in the ebuild,
@@ -138,4 +118,5 @@ pkg_nofetch() {
 	#	install
 	# Again, verify the Makefiles!  We don't want anything falling
 	# outside of ${D}.
+	make_desktop_entry ${PN} "Homestuck-bin"
 #}
