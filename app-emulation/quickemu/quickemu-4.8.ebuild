@@ -3,7 +3,11 @@
 
 EAPI=8
 
+<<<<<<< HEAD
 PYTHON_COMPAT=( python3_10 )
+=======
+PYTHON_COMPAT=( python3_{8..10} )
+>>>>>>> a87b118 (added other ebuilds)
 inherit python-single-r1
 
 DESCRIPTION="Create and run optimised Windows, macOS and Linux desktop virtual machines"
