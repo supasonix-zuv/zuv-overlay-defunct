@@ -13,7 +13,6 @@
 # If an eclass doesn't support latest EAPI, use the previous EAPI instead.
 EAPI=8
 
-
 # inherit lists eclasses to inherit functions from. For example, an ebuild
 # that needs the eautoreconf function from autotools.eclass won't work
 # without the following line:
@@ -23,14 +22,14 @@ EAPI=8
 # Take a look at the eclass/ directory for more examples.
 
 # Short one-line description of this package.
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="Get TiTS!"
 
 # Homepage, not used by Portage directly but handy for developer reference
-HOMEPAGE="https://foo.example.org/"
+HOMEPAGE="https://fenoxo.org/"
 
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
-SRC_URI="ftp://foo.example.org/${P}.tar.gz"
+SRC_URI="https://fenoxo.org/play/latest_tits_electron_linux.php"
 
 # Source directory; the dir where the sources can be found (automatically
 # unpacked) inside ${WORKDIR}.  The default value for S is ${WORKDIR}/${P}
@@ -38,11 +37,10 @@ SRC_URI="ftp://foo.example.org/${P}.tar.gz"
 # to keep it tidy.
 #S="${WORKDIR}/${P}"
 
-
 # License of the package.  This must match the name of file(s) in the
 # licenses/ directory.  For complex license combination see the developer
 # docs on gentoo.org for details.
-LICENSE=""
+LICENSE="BSD"
 
 # The SLOT variable is used to tell Portage if it's OK to keep multiple
 # versions of the same package installed at the same time.  For example,
@@ -78,12 +76,11 @@ KEYWORDS="~amd64"
 # Comprehensive list of any and all USE flags leveraged in the ebuild,
 # with some exceptions, e.g., ARCH specific flags like "amd64" or "ppc".
 # Not needed if the ebuild doesn't use any USE flags.
-IUSE="gnome X"
+IUSE=""
 
 # A space delimited list of portage features to restrict. man 5 ebuild
 # for details.  Usually not needed.
 #RESTRICT="strip"
-
 
 # Run-time dependencies. Must be defined to whatever this depends on to run.
 # Example:
@@ -103,7 +100,6 @@ IUSE="gnome X"
 # Build-time dependencies that are executed during the emerge process, and
 # only need to be present in the native build system (CBUILD). Example:
 #BDEPEND="virtual/pkgconfig"
-
 
 # The following src_configure function is implemented as default by portage, so
 # you only need to call it if you need a different behaviour.
